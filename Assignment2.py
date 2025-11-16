@@ -1,11 +1,11 @@
-def max_two_in_list(numbers):
+ef max_two_in_list(numbers):
     if len(numbers) < 2:
         return None
-    max1 = max(numbers)
-    temp = numbers.copy()
-    temp.remove(max1)
-    max2 = max(temp)
-    return (max1, max2)
+    unique = list(set(numbers))
+    if len(unique) < 2:
+        return None
+    unique.sort(reverse=True)
+    return (unique[0], unique[1])
 
 
 def remove_duplicates_and_sort(numbers):
